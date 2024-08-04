@@ -1,0 +1,23 @@
+{
+  "user": {
+    "userName": "standard_user",
+    "passWord": "secret_sauce"
+  },
+  "personalData": {
+    "firstName": "Hélio",
+    "lastName": "Castel-Branco",
+    "postalCode": "1234-123"
+  },
+  "products": [
+    {
+      "name": "Sauce Labs Backpack",
+      "price": "$29.99",
+      "price2": "$29.99"
+    },
+    {
+      "name": "Sauce Labs Onesie",
+      "price": "$7.99",
+      "price2": "$7.99"
+    }
+  ]
+}
