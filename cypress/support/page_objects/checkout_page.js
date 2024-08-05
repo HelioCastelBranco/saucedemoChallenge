@@ -8,47 +8,48 @@ const productPrice = '[data-test="inventory-item-price"]'
 const finishBttn = '[data-test="finish"]'
 
 
-
+// Function to validate cart items and update their prices in the fixture file
 export function ValCartItems(expectedSelectors = removeItemSelectors) {
     expectedSelectors.forEach((selector, index) => {
         cy.fixture('purchase').then((purchase) => {
-            // Verificar se o produto existe e contém o nome correto
+              // Verify if the product exists and contains the correct name
             cy.get(productName).eq(index).should('exist').contains(purchase.products[index].name);
 
-            // Capturar o preço do produto correspondente ao índice atual
+            // Capture the price of the product corresponding to the current index
             cy.get(productPrice).eq(index).invoke('text').then((text) => {
-                // Ler o conteúdo atual do arquivo JSON
+                // Read the current content of the JSON file
                 cy.readFile('cypress/fixtures/purchase.json').then((currentData) => {
-                    // Atualizar o preço do produto no JSON
+                    // Update the product price in the JSON file
                     currentData.products[index].price = text;
 
-                    // Escrever o conteúdo atualizado de volta no arquivo JSON
+                    // Write the updated content back to the JSON file
                     cy.writeFile('cypress/fixtures/purchase.json', currentData);
                 });
             });
         });
 
-        // Verificar se o seletor existe e está visível
+        // Verify if the selector exists and is visible
         cy.get(selector).should('exist').and('be.visible');
     });
 }
 
+// Function to validate checkout items and compare their prices with the fixture file
 export function ValCheckout(expectedSelectors = removeItemSelectors) {
     expectedSelectors.forEach((selector, index) => {
         cy.fixture('purchase').then((purchase) => {
-            // Verificar se o produto existe e contém o nome correto
+             // Verify if the product exists and contains the correct name
             cy.get(productName).eq(index).should('exist').contains(purchase.products[index].name);
 
-            // Capturar o preço do produto correspondente ao índice atual
+            // Capture the price of the product corresponding to the current index
             cy.get(productPrice).eq(index).invoke('text').then((text) => {
-                // Ler o conteúdo atual do arquivo JSON
+               // Read the current content of the JSON file
                 cy.readFile('cypress/fixtures/purchase.json').then((currentData) => {
-
+// Compare the pre-checkout price with the checkout overview price
                     if (currentData.products[index].price !== text) {
                         throw new Error(`Pre Checkout price: ${currentData.products[index].price}, does not match with checkout overview price: ${text}`);
                     }
                     else {
-                        // Log de sucesso no Cypress
+                         // Log success message in Cypress
                         cy.log(`Pre Checkout price: ${currentData.products[index].price}, matches with checkout overview price: ${text}`);
                     }
                 });
@@ -57,10 +58,12 @@ export function ValCheckout(expectedSelectors = removeItemSelectors) {
     });
 }
 
+// Function to click the finish button to confirm the order
 export function OrderConfirmation() {
     cy.get(finishBttn).click();
 }
 
+// Function to click the checkout button to open the checkout page
 export function openCheckout() {
     cy.get(checkoutBttn).click();
 }

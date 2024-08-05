@@ -3,73 +3,47 @@
     "description": "    As a user i want to add items to the cart and complete the purchase",
     "keyword": "Feature",
     "name": "Test the functionality of login, adding products to the cart, and completing the purchase",
-    "line": 5,
+    "line": 1,
     "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase",
-    "tags": [
-      {
-        "name": "@saucedemoTest",
-        "line": 1
-      },
-      {
-        "name": "@sprint7",
-        "line": 2
-      },
-      {
-        "name": "@jiraTask886",
-        "line": 3
-      }
-    ],
+    "tags": [],
     "uri": "purchase.feature",
     "elements": [
       {
         "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase;validate-login-proceadure",
         "keyword": "Scenario",
-        "line": 8,
+        "line": 5,
         "name": "Validate login proceadure",
-        "tags": [
-          {
-            "name": "@saucedemoTest",
-            "line": 1
-          },
-          {
-            "name": "@sprint7",
-            "line": 2
-          },
-          {
-            "name": "@jiraTask886",
-            "line": 3
-          }
-        ],
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
+            "line": 6,
             "name": "already on saucedemo page",
             "result": {
               "status": "passed",
-              "duration": 1095000000
+              "duration": 1021000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 7,
             "name": "I enter valid login credentials",
             "result": {
               "status": "passed",
-              "duration": 952000000
+              "duration": 715000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 8,
             "name": "I should be redirected to the home page",
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 9000000
             }
           }
         ]
@@ -77,90 +51,16 @@
       {
         "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase;adding-products-to-the-cart-proceadure",
         "keyword": "Scenario",
-        "line": 14,
+        "line": 10,
         "name": "Adding products to the cart proceadure",
-        "tags": [
-          {
-            "name": "@saucedemoTest",
-            "line": 1
-          },
-          {
-            "name": "@sprint7",
-            "line": 2
-          },
-          {
-            "name": "@jiraTask886",
-            "line": 3
-          },
-          {
-            "name": "@jiraTask886",
-            "line": 13
-          }
-        ],
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 15,
+            "line": 11,
             "name": "I am on the home page 'Products'",
-            "result": {
-              "status": "passed",
-              "duration": 113000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I add two products to the cart",
-            "result": {
-              "status": "passed",
-              "duration": 179000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "The products should be added to the cart",
-            "result": {
-              "status": "passed",
-              "duration": 13000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase;validation-of-items-in-the-cart",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Validation of items in the cart",
-        "tags": [
-          {
-            "name": "@saucedemoTest",
-            "line": 1
-          },
-          {
-            "name": "@sprint7",
-            "line": 2
-          },
-          {
-            "name": "@jiraTask886",
-            "line": 3
-          },
-          {
-            "name": "@jiraTask887",
-            "line": 19
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 21,
-            "name": "I have two products in the cart",
             "result": {
               "status": "passed",
               "duration": 37000000
@@ -169,21 +69,61 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 22,
-            "name": "I view the cart 'Your Cart'",
+            "line": 12,
+            "name": "I add two products to the cart",
             "result": {
               "status": "passed",
-              "duration": 96000000
+              "duration": 160000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 23,
+            "line": 13,
+            "name": "The products should be added to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase;validation-of-items-in-the-cart",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Validation of items in the cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I have two products in the cart",
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I view the cart 'Your Cart'",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
             "name": "I should see all added products",
             "result": {
               "status": "passed",
-              "duration": 126000000
+              "duration": 115000000
             }
           }
         ]
@@ -191,66 +131,49 @@
       {
         "id": "test-the-functionality-of-login,-adding-products-to-the-cart,-and-completing-the-purchase;completing-the-purchase-proceadure",
         "keyword": "Scenario",
-        "line": 26,
+        "line": 20,
         "name": "Completing the purchase proceadure",
-        "tags": [
-          {
-            "name": "@saucedemoTest",
-            "line": 1
-          },
-          {
-            "name": "@sprint7",
-            "line": 2
-          },
-          {
-            "name": "@jiraTask886",
-            "line": 3
-          },
-          {
-            "name": "@jiraTask888",
-            "line": 25
-          }
-        ],
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 27,
+            "line": 21,
             "name": "I am viewing the cart 'Your Cart'",
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 25000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 28,
+            "line": 22,
             "name": "I proceed to checkout",
             "result": {
               "status": "passed",
-              "duration": 89000000
+              "duration": 79000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 29,
+            "line": 23,
             "name": "I complete the purchase process",
             "result": {
               "status": "passed",
-              "duration": 866000000
+              "duration": 807000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 30,
+            "line": 24,
             "name": "I should see a confirmation of my order 'Checkout: Overview'",
             "result": {
               "status": "passed",
-              "duration": 170000000
+              "duration": 153000000
             }
           }
         ]
