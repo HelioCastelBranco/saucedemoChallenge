@@ -16,3 +16,4 @@ When('I add two products to the cart', () => {
 Then('The products should be added to the cart', () => {
     HomePage.ValCartBadgeExists();
 });
+///////////7

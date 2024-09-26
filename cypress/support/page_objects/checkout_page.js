@@ -27,7 +27,6 @@ export function ValCartItems(expectedSelectors = removeItemSelectors) {
                 });
             });
         });
-
         // Verify if the selector exists and is visible
         cy.get(selector).should('exist').and('be.visible');
     });
