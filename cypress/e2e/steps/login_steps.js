@@ -15,6 +15,7 @@ When('I enter valid login credentials', () => {
      });
 })
 
+////teste////
 ////////////////////////// Then ///////////////////////////////////
 Then('I should be redirected to the home page', () => {
      HomePage.ValHeader('Products');
