@@ -24,9 +24,6 @@ When('I proceed to checkout', () => {
     CheckOutPage.openCheckout();
 });
 
-
-
-
 ////////////////////////// Then ///////////////////////////////////
 Then('I should see a confirmation of my order {string}', (headerName) => {
     HomePage.ValHeader(headerName);
@@ -39,16 +36,9 @@ Then('I should see all added products', () => {
     CheckOutPage.ValCartItems();
 });
 
-
-
 ////////////////////////// And ///////////////////////////////////
 And('I complete the purchase process', () => {
     cy.fixture('purchase').then((purchase) => {
         registration_form_page.CompleteCheckoutProcess(purchase.personalData);
     });
 });
-
-
-
-
-
