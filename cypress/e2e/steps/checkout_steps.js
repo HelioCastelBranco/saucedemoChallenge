@@ -19,7 +19,7 @@ When('I view the cart {string}', (headerName) => {
     HomePage.ValHeader(headerName);
 });
 
-
+///Porceeed checkout////
 When('I proceed to checkout', () => {
     CheckOutPage.openCheckout();
 });
